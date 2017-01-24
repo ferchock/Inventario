@@ -12,6 +12,21 @@
     <div>
         
     
+        <asp:GridView ID="grvItems" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                <asp:BoundField DataField="ItemCode" HeaderText="ItemCode" SortExpression="ItemCode" />
+                <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:InventarioConnectionString %>" SelectCommand="SELECT * FROM [Items]"></asp:SqlDataSource>
+        <br />
+        <asp:Button ID="btnShow" runat="server" OnClick="btnShow_Click" Text="Show" />
+        <br />
+        <br />
+        
+        
+    
         Item Code&nbsp;
         <asp:TextBox ID="txtItemCode" runat="server"></asp:TextBox>
         <br />

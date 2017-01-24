@@ -10,6 +10,9 @@
 
 #pragma warning disable 1591
 
+using System;
+using System.Web.UI.WebControls;
+
 namespace Inventario {
     
     
@@ -2689,6 +2692,11 @@ namespace Inventario.BDInventarioTableAdapters {
                 }
             }
             return returnValue;
+        }
+
+        internal Table Fill()
+        {
+            throw new NotImplementedException();
         }
     }
     

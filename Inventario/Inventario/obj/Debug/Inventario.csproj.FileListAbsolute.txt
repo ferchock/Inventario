@@ -90,3 +90,4 @@ C:\Users\pc\Documents\GitHub\Inventario\Inventario\Inventario\bin\es\Microsoft.O
 C:\Users\pc\Documents\GitHub\Inventario\Inventario\Inventario\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\pc\Documents\GitHub\Inventario\Inventario\Inventario\obj\Debug\Inventario.dll
 C:\Users\pc\Documents\GitHub\Inventario\Inventario\Inventario\obj\Debug\Inventario.pdb
+C:\Users\pc\Documents\GitHub\Inventario\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
