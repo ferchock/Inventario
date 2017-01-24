@@ -13,39 +13,37 @@ namespace Inventario
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //if (!IsPostBack)
+            //{
+            //    txtItemCode.Text = "";
+            //    txtDescription.Text = "";
+            //}
+            
         }
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
-            txtItemCode.Text = "";
-            txtDescription.Text = "";
-            string item = txtItemCode.Text;
-            string description = txtDescription.Text;
 
-            if (item != "" || description != "")
+            if (string.IsNullOrWhiteSpace(txtItemCode.Text) || string.IsNullOrWhiteSpace(txtDescription.Text))
             {
-                try
-                {
-                    BDInventarioTableAdapters.ItemsTableAdapter ni = new BDInventarioTableAdapters.ItemsTableAdapter();
-                    ni.insertar(item, description);
-                    lblStatus.Text = "Item Insertado Correctamente!";
-                    txtItemCode.Text = "";
-                    txtDescription.Text = "";
 
-                }
-                catch
-                {
-                    lblStatus.Text = "Error al insertar!";
-                }
+                lblStatus.Text = "Campos no pueden estar vacíos!";
+
+
             }
             else
             {
-                lblStatus.Text = "Campos no pueden estar vacíos!";
+
+                string item = txtItemCode.Text;
+                string description = txtDescription.Text;
+                BDInventarioTableAdapters.ItemsTableAdapter ni = new BDInventarioTableAdapters.ItemsTableAdapter();
+                ni.insertar(item, description);
+                lblStatus.Text = "Item Insertado Correctamente!";
+                
             }
 
-
-
+            txtItemCode.Text = "";
+            txtDescription.Text = "";
         }
     }
 }
